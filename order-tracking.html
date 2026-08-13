@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Status & Tracking — Ceries OMS Support</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <nav>
+    <div class="nav-brand">Ceries OMS <span>/ Support</span></div>
+    <div class="nav-links">
+      <a href="order-tracking.html">Order Tracking</a>
+      <a href="label-issues.html">Labels</a>
+      <a href="inventory.html">Inventory</a>
+      <a href="pack-verify.html">Pack Verify</a>
+      <a href="shopify-sync.html">Shopify Sync</a>
+    </div>
+  </nav>
+
+  <div class="page-wrap">
+    <div class="article-header">
+      <div class="breadcrumb"><a href="index.html">Support</a> → Order Status & Tracking</div>
+      <h1>Order Status & Tracking</h1>
+      <div class="meta">Last updated: <!-- AUTO-UPDATED --></div>
+    </div>
+
+    <div class="with-sidebar">
+      <div class="content">
+        <h2>Understanding order statuses</h2>
+        <p>Every order in the Ceries OMS moves through a defined set of statuses. Understanding what each status means helps you identify where an order is in the fulfillment flow.</p>
+
+        <div class="callout info">
+          Orders only advance forward through statuses. If you see an order stuck at a step, see the troubleshooting section below.
+        </div>
+
+        <h3>Status definitions</h3>
+        <ul>
+          <li><strong>Unfulfilled</strong> — Order received, not yet assigned a label. Appears in the Rate Shopper queue.</li>
+          <li><strong>Label Created</strong> — A shipping label has been generated. The carrier has the shipment in their system.</li>
+          <li><strong>In Transit</strong> — Carrier has scanned the package. Tracking is active.</li>
+          <li><strong>Delivered</strong> — Carrier has confirmed delivery.</li>
+          <li><strong>Cancelled</strong> — Order was cancelled before fulfillment.</li>
+        </ul>
+
+        <!-- SCREENSHOT: orders-status-overview -->
+
+        <h2>Finding a tracking number</h2>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <div class="step-body">
+              <strong>Open the Orders page</strong>
+              <p>Navigate to Orders in the left sidebar. Use the search bar to find the order by order number, customer name, or SKU.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <div class="step-body">
+              <strong>Click the order row</strong>
+              <p>The order detail panel opens on the right. The tracking number appears under the Shipping section once a label has been created.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <div class="step-body">
+              <strong>Click the tracking number</strong>
+              <p>Opens the carrier's tracking page in a new tab. For USPS, UPS, or FedEx shipments this shows the full tracking history.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- SCREENSHOT: order-tracking-number-location -->
+
+        <h2>Troubleshooting</h2>
+
+        <h3>Order shows "Unfulfilled" but it was packed</h3>
+        <p>The status only advances when a label is created in the OMS. If the item was packed but the label was printed outside the OMS (e.g. from Shopify admin directly), the OMS won't see it.</p>
+        <p>Contact Ceries support with the order number and we'll manually update the status.</p>
+
+        <h3>Tracking number is not updating</h3>
+        <p>Carrier tracking updates typically take 2–6 hours after the first scan. If tracking shows no movement after 24 hours from the label creation date:</p>
+        <ol>
+          <li>Verify the package was handed to the carrier (check the carrier receipt if available).</li>
+          <li>Contact Ceries support with the order number so we can investigate the tracking event feed.</li>
+        </ol>
+
+        <h3>Order is missing from the Orders page</h3>
+        <p>If a Shopify order was placed but isn't appearing in the OMS, see <a href="shopify-sync.html">Shopify Sync</a> for troubleshooting steps.</p>
+      </div>
+
+      <aside class="sidebar-nav">
+        <ul>
+          <li><a href="#understanding-order-statuses">Status definitions</a></li>
+          <li><a href="#finding-a-tracking-number">Finding a tracking number</a></li>
+          <li><a href="#troubleshooting">Troubleshooting</a></li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+
+  <footer>
+    Ceries LLC — <a href="mailto:support@ceries.com">support@ceries.com</a> — Mon–Fri 9am–5pm CT
+  </footer>
+</body>
+</html>

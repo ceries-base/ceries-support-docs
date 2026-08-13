@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventory — Ceries OMS Support</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <nav>
+    <div class="nav-brand">Ceries OMS <span>/ Support</span></div>
+    <div class="nav-links">
+      <a href="order-tracking.html">Order Tracking</a>
+      <a href="label-issues.html">Labels</a>
+      <a href="inventory.html">Inventory</a>
+      <a href="pack-verify.html">Pack Verify</a>
+      <a href="shopify-sync.html">Shopify Sync</a>
+    </div>
+  </nav>
+
+  <div class="page-wrap">
+    <div class="article-header">
+      <div class="breadcrumb"><a href="index.html">Support</a> → Inventory</div>
+      <h1>Inventory</h1>
+      <div class="meta">Last updated: <!-- AUTO-UPDATED --></div>
+    </div>
+
+    <div class="with-sidebar">
+      <div class="content">
+        <h2>How inventory works</h2>
+        <p>The Ceries OMS tracks inventory at the SKU level. Quantities are updated automatically when:</p>
+        <ul>
+          <li>Stock is received into the warehouse (via the Receiving tab)</li>
+          <li>A shipping label is created (deducts from available)</li>
+          <li>A label is voided (returns to available)</li>
+          <li>An order is cancelled after a label was created</li>
+        </ul>
+
+        <div class="callout info">
+          The OMS is the source of truth for inventory. Shopify inventory counts are updated separately — discrepancies between the two are expected during high-volume periods.
+        </div>
+
+        <!-- SCREENSHOT: inventory-overview -->
+
+        <h2>Checking inventory counts</h2>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <div class="step-body">
+              <strong>Open the SKU Config tab</strong>
+              <p>Found in the left sidebar. Shows all configured SKUs with current available and reserved counts.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <div class="step-body">
+              <strong>Find your SKU</strong>
+              <p>Use the search bar to filter by SKU code or product name. Available quantity is the count Ceries currently has on hand to fulfill.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <div class="step-body">
+              <strong>Check reserved vs available</strong>
+              <p>Reserved = units allocated to open orders not yet shipped. Available = units ready for new orders. Total on hand = available + reserved.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- SCREENSHOT: sku-config-inventory -->
+
+        <h2>Inventory discrepancies</h2>
+
+        <h3>OMS count doesn't match what was received</h3>
+        <p>If you believe the inventory count is wrong after a receiving event, contact Ceries support with:</p>
+        <ul>
+          <li>The SKU code(s) in question</li>
+          <li>The date stock was received</li>
+          <li>Expected quantity vs what the OMS shows</li>
+        </ul>
+        <p>We'll pull the allocation log to trace every deduction and identify the discrepancy.</p>
+
+        <h3>Shopify shows different quantity than the OMS</h3>
+        <p>The OMS pushes inventory updates to Shopify when labels are created, but Shopify can lag by several minutes during high volume. If the discrepancy persists beyond 30 minutes, contact support.</p>
+
+        <div class="callout warn">
+          Do not manually edit inventory quantities in Shopify admin for stores managed by Ceries. Manual edits will be overwritten by the next OMS sync and can cause counting errors.
+        </div>
+
+        <h2>Receiving stock</h2>
+        <p>All inbound stock must be received through the OMS Receiving tab. Physically receiving stock at the warehouse without logging it in the OMS will not update available counts.</p>
+        <p>Contact your Ceries account manager to schedule a receiving session or to submit a purchase order for processing.</p>
+      </div>
+
+      <aside class="sidebar-nav">
+        <ul>
+          <li><a href="#how-inventory-works">How inventory works</a></li>
+          <li><a href="#checking-inventory-counts">Checking counts</a></li>
+          <li><a href="#inventory-discrepancies">Discrepancies</a></li>
+          <li><a href="#receiving-stock">Receiving stock</a></li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+
+  <footer>
+    Ceries LLC — <a href="mailto:support@ceries.com">support@ceries.com</a> — Mon–Fri 9am–5pm CT
+  </footer>
+</body>
+</html>

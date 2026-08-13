@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopify Sync — Ceries OMS Support</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <nav>
+    <div class="nav-brand">Ceries OMS <span>/ Support</span></div>
+    <div class="nav-links">
+      <a href="order-tracking.html">Order Tracking</a>
+      <a href="label-issues.html">Labels</a>
+      <a href="inventory.html">Inventory</a>
+      <a href="pack-verify.html">Pack Verify</a>
+      <a href="shopify-sync.html">Shopify Sync</a>
+    </div>
+  </nav>
+
+  <div class="page-wrap">
+    <div class="article-header">
+      <div class="breadcrumb"><a href="index.html">Support</a> → Shopify Sync</div>
+      <h1>Shopify Sync & Connection</h1>
+      <div class="meta">Last updated: <!-- AUTO-UPDATED --></div>
+    </div>
+
+    <div class="with-sidebar">
+      <div class="content">
+        <h2>How the Shopify connection works</h2>
+        <p>The Ceries OMS connects to your Shopify store via a secure app integration. When an order is placed on Shopify, a webhook fires to the OMS within seconds. The order is ingested, inventory is reserved, and the order appears in the Rate Shopper queue.</p>
+        <p>When a label is created in the OMS, Shopify is updated with the tracking number and the fulfillment is marked complete on your store automatically.</p>
+
+        <!-- SCREENSHOT: shopify-connection-status -->
+
+        <h2>Orders not appearing in the OMS</h2>
+
+        <h3>New orders (within the last 30 minutes)</h3>
+        <p>Webhooks from Shopify typically arrive within 10–30 seconds. If an order is more than 5 minutes old and not showing up:</p>
+        <ol>
+          <li>Refresh the Orders page.</li>
+          <li>Check that the order is not in a draft or pending payment state in Shopify — only paid orders are ingested.</li>
+          <li>Contact Ceries support with the Shopify order number. We'll check the webhook log.</li>
+        </ol>
+
+        <h3>Historical orders (before the integration was connected)</h3>
+        <p>Orders placed before the Ceries OMS was connected to your store will not appear automatically. Contact your account manager to schedule a historical order sync if needed.</p>
+
+        <div class="callout info">
+          Only paid, unfulfilled orders are pulled into the OMS. Draft orders, test orders, and orders already fulfilled in Shopify are excluded.
+        </div>
+
+        <!-- SCREENSHOT: orders-page-sync-status -->
+
+        <h2>Fulfillment not pushing back to Shopify</h2>
+        <p>After a label is created in the OMS, Shopify should be updated within 60 seconds. If an order shows "Label Created" in the OMS but Shopify still shows "Unfulfilled":</p>
+        <ol>
+          <li>Wait 5 minutes and refresh Shopify — Shopify occasionally has processing delays.</li>
+          <li>If the order is still unfulfilled in Shopify after 30 minutes, contact Ceries support with the order number.</li>
+        </ol>
+
+        <h2>Connection health</h2>
+        <p>If multiple orders in a row are not syncing, the Shopify connection may have dropped. This can happen if:</p>
+        <ul>
+          <li>The Shopify app was uninstalled or re-installed.</li>
+          <li>Shopify changed the store's plan or permissions.</li>
+          <li>A Shopify outage occurred.</li>
+        </ul>
+        <p>Contact Ceries support immediately if you suspect a connection issue — <a href="mailto:support@ceries.com">support@ceries.com</a>. Do not uninstall and reinstall the app as this can disrupt active orders.</p>
+
+        <div class="callout warn">
+          Never uninstall the Ceries OMS Shopify app without first contacting Ceries support. This disconnects the webhook and orders will not sync until the connection is manually restored.
+        </div>
+
+        <h2>Webhooks</h2>
+        <p>The OMS uses Shopify webhooks to receive real-time order events. Webhooks are automatically configured when your store is connected. You don't need to set them up in Shopify admin.</p>
+        <p>If you see webhook-related errors in Shopify's "Notifications" settings, contact Ceries support — do not delete or modify the webhook entries.</p>
+      </div>
+
+      <aside class="sidebar-nav">
+        <ul>
+          <li><a href="#how-the-shopify-connection-works">How it works</a></li>
+          <li><a href="#orders-not-appearing-in-the-oms">Orders not appearing</a></li>
+          <li><a href="#fulfillment-not-pushing-back-to-shopify">Fulfillment not pushing</a></li>
+          <li><a href="#connection-health">Connection health</a></li>
+          <li><a href="#webhooks">Webhooks</a></li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+
+  <footer>
+    Ceries LLC — <a href="mailto:support@ceries.com">support@ceries.com</a> — Mon–Fri 9am–5pm CT
+  </footer>
+</body>
+</html>

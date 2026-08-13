@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pack Verify — Ceries OMS Support</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <nav>
+    <div class="nav-brand">Ceries OMS <span>/ Support</span></div>
+    <div class="nav-links">
+      <a href="order-tracking.html">Order Tracking</a>
+      <a href="label-issues.html">Labels</a>
+      <a href="inventory.html">Inventory</a>
+      <a href="pack-verify.html">Pack Verify</a>
+      <a href="shopify-sync.html">Shopify Sync</a>
+    </div>
+  </nav>
+
+  <div class="page-wrap">
+    <div class="article-header">
+      <div class="breadcrumb"><a href="index.html">Support</a> → Pack Verify</div>
+      <h1>Pack Verify</h1>
+      <div class="meta">Last updated: <!-- AUTO-UPDATED --></div>
+    </div>
+
+    <div class="with-sidebar">
+      <div class="content">
+        <h2>What is Pack Verify?</h2>
+        <p>Pack Verify is a quality control step that confirms the correct items were packed before an order ships. The warehouse team scans each item's barcode, and the OMS confirms it matches the order.</p>
+        <p>Orders that pass Pack Verify are marked confirmed. Orders with discrepancies are flagged for review before the label goes out.</p>
+
+        <!-- SCREENSHOT: pack-verify-overview -->
+
+        <h2>The Pack Verify flow</h2>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <div class="step-body">
+              <strong>Scan the order barcode</strong>
+              <p>The packing slip has a barcode at the top. Scan it to pull up the order in Pack Verify.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <div class="step-body">
+              <strong>Scan each item</strong>
+              <p>Scan the barcode on each unit. The OMS checks it against the order's expected items and quantities.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <div class="step-body">
+              <strong>Select the box</strong>
+              <p>After all items are scanned, choose the box size used. This is used for billing and audit.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">4</div>
+            <div class="step-body">
+              <strong>Confirm</strong>
+              <p>If everything matches, confirm. The order is marked verified and ready to ship.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- SCREENSHOT: pack-verify-scan -->
+
+        <h2>Troubleshooting</h2>
+
+        <h3>Scanner won't recognize the barcode</h3>
+        <p>If the scanner can't read the packing slip barcode:</p>
+        <ul>
+          <li>Check that the barcode is not folded, torn, or smudged.</li>
+          <li>Try scanning the order label on the box instead — the tracking barcode can also pull up the order.</li>
+          <li>If neither works, enter the order number manually using the search field at the top of Pack Verify.</li>
+        </ul>
+
+        <h3>Discrepancy flagged — item doesn't match</h3>
+        <p>If Pack Verify flags a discrepancy (scanned item doesn't match expected SKU):</p>
+        <ol>
+          <li>Stop and do not ship the order.</li>
+          <li>Pull the correct item and re-scan.</li>
+          <li>If you believe the correct item was already packed and the scan is wrong, contact Ceries support. We'll review the pack verify photos and clear the discrepancy if confirmed correct.</li>
+        </ol>
+
+        <h3>Order not found in Pack Verify</h3>
+        <p>Orders only appear in Pack Verify after a label has been created in the OMS. If the order is missing:</p>
+        <ul>
+          <li>Confirm the label was created (check the Orders page for "Label Created" status).</li>
+          <li>If the label was created more than 5 minutes ago and the order still doesn't appear, contact Ceries support.</li>
+        </ul>
+
+        <div class="callout info">
+          Pack Verify is required for all orders at participating Ceries warehouses. Orders cannot be marked shipped without a completed verification.
+        </div>
+      </div>
+
+      <aside class="sidebar-nav">
+        <ul>
+          <li><a href="#what-is-pack-verify">What is Pack Verify?</a></li>
+          <li><a href="#the-pack-verify-flow">The flow</a></li>
+          <li><a href="#troubleshooting">Troubleshooting</a></li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+
+  <footer>
+    Ceries LLC — <a href="mailto:support@ceries.com">support@ceries.com</a> — Mon–Fri 9am–5pm CT
+  </footer>
+</body>
+</html>

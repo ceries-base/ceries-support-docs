@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Label Issues — Ceries OMS Support</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <nav>
+    <div class="nav-brand">Ceries OMS <span>/ Support</span></div>
+    <div class="nav-links">
+      <a href="order-tracking.html">Order Tracking</a>
+      <a href="label-issues.html">Labels</a>
+      <a href="inventory.html">Inventory</a>
+      <a href="pack-verify.html">Pack Verify</a>
+      <a href="shopify-sync.html">Shopify Sync</a>
+    </div>
+  </nav>
+
+  <div class="page-wrap">
+    <div class="article-header">
+      <div class="breadcrumb"><a href="index.html">Support</a> → Label Issues</div>
+      <h1>Label Issues</h1>
+      <div class="meta">Last updated: <!-- AUTO-UPDATED --></div>
+    </div>
+
+    <div class="with-sidebar">
+      <div class="content">
+        <h2>Label creation paths</h2>
+        <p>Labels in the Ceries OMS are created through two paths depending on your workflow:</p>
+        <ul>
+          <li><strong>Rate Shopper</strong> — Select an order from the queue, compare carrier rates, and print. Standard single-order flow.</li>
+          <li><strong>Bulk Print (MORS)</strong> — Print labels for multiple orders at once using preset carrier rules.</li>
+        </ul>
+
+        <div class="callout warn">
+          Labels must always be created through the OMS — never through Shopify admin or a carrier portal directly. Labels created outside the OMS won't deduct inventory or update order status.
+        </div>
+
+        <!-- SCREENSHOT: rate-shopper-overview -->
+
+        <h2>Can't print a label</h2>
+
+        <h3>Order doesn't appear in the Rate Shopper queue</h3>
+        <p>The Rate Shopper only shows unfulfilled orders that have at least one configured SKU. Check:</p>
+        <ol>
+          <li>The order is not cancelled or already fulfilled.</li>
+          <li>All SKUs on the order have a configuration in the SKU Config tab.</li>
+          <li>If the store was recently connected, wait 5 minutes for the order sync to complete.</li>
+        </ol>
+
+        <h3>No rates returned</h3>
+        <p>If the rate fetch comes back empty, the most common causes are:</p>
+        <ul>
+          <li>Missing or invalid shipping address on the order (especially state abbreviation or ZIP code format).</li>
+          <li>Package weight is 0 — check that SKU dimensions and weight are configured.</li>
+          <li>Carrier account issue — contact Ceries support.</li>
+        </ul>
+
+        <!-- SCREENSHOT: rate-shopper-no-rates -->
+
+        <h2>Wrong address on label</h2>
+        <p>If a label was created with an incorrect address, void the label immediately and do not ship it.</p>
+
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <div class="step-body">
+              <strong>Contact Ceries support</strong>
+              <p>Email <a href="mailto:support@ceries.com">support@ceries.com</a> with the order number. We'll void the label and reset the order for reprint.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <div class="step-body">
+              <strong>Correct the address in Shopify</strong>
+              <p>Update the shipping address on the Shopify order before we reprint. The corrected address will sync to the OMS automatically within a few minutes.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <div class="step-body">
+              <strong>Reprint the label</strong>
+              <p>Once we confirm the void and address update, the order returns to the Rate Shopper queue for reprinting.</p>
+            </div>
+          </div>
+        </div>
+
+        <h2>Reprinting a label</h2>
+        <p>If a label was created but lost or damaged before shipping, contact Ceries support with the order number. We can reprint from the existing label without voiding the original or creating a duplicate charge.</p>
+
+        <div class="callout info">
+          Do not attempt to create a second label for the same order — this results in two billable labels. Always contact support for reprints.
+        </div>
+
+        <h2>Voiding a label</h2>
+        <p>Labels can only be voided within 30 days of creation. Once a label is scanned by the carrier, it cannot be voided.</p>
+        <p>To request a void, email <a href="mailto:support@ceries.com">support@ceries.com</a> with the order number and reason. We'll handle the void and credit if applicable.</p>
+      </div>
+
+      <aside class="sidebar-nav">
+        <ul>
+          <li><a href="#label-creation-paths">Label creation paths</a></li>
+          <li><a href="#cant-print-a-label">Can't print a label</a></li>
+          <li><a href="#wrong-address-on-label">Wrong address</a></li>
+          <li><a href="#reprinting-a-label">Reprinting</a></li>
+          <li><a href="#voiding-a-label">Voiding</a></li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+
+  <footer>
+    Ceries LLC — <a href="mailto:support@ceries.com">support@ceries.com</a> — Mon–Fri 9am–5pm CT
+  </footer>
+</body>
+</html>
