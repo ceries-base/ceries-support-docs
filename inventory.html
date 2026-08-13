@@ -87,6 +87,16 @@
           Do not manually edit inventory quantities in Shopify admin for stores managed by Ceries. Manual edits will be overwritten by the next OMS sync and can cause counting errors.
         </div>
 
+        <h2>Self-fulfilled SKUs</h2>
+        <p>Some SKUs are fulfilled directly by you, not by Ceries. Common examples include accessories like grips, gloves, or downloadable products. These SKUs are not tracked in the Ceries OMS and Ceries will never create or ship labels for them.</p>
+        <ul>
+          <li>If an order appears "unfulfilled" in the OMS for a self-fulfilled SKU, it means the fulfillment needs to happen on your end — Ceries cannot ship it.</li>
+          <li>If Shopify shows the item as overselling (selling when out of stock), contact Ceries support. We can configure inventory rules to block Shopify from accepting orders when stock is depleted.</li>
+        </ul>
+        <div class="callout info">
+          Not sure if a SKU is self-fulfilled? Check with your Ceries account manager. Self-fulfilled SKUs won't appear in the Ceries Rate Shopper or Label queue.
+        </div>
+
         <h2>Receiving stock</h2>
         <p>All inbound stock must be received through the OMS Receiving tab. Physically receiving stock at the warehouse without logging it in the OMS will not update available counts.</p>
         <p>Contact your Ceries account manager to schedule a receiving session or to submit a purchase order for processing.</p>
@@ -97,6 +107,7 @@
           <li><a href="#how-inventory-works">How inventory works</a></li>
           <li><a href="#checking-inventory-counts">Checking counts</a></li>
           <li><a href="#inventory-discrepancies">Discrepancies</a></li>
+          <li><a href="#self-fulfilled-skus">Self-fulfilled SKUs</a></li>
           <li><a href="#receiving-stock">Receiving stock</a></li>
         </ul>
       </aside>
